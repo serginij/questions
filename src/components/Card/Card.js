@@ -1,6 +1,8 @@
 import React from 'react';
 
 import './Card.css';
+import correctImage from '../../assets/approved.svg';
+import wrongImage from '../../assets/cancel.svg';
 
 const card = (props) => {
     let button = null;
@@ -16,8 +18,10 @@ const card = (props) => {
             {
                 props.answers.map((ansv, index) => {
                     let style = props.style;
+                    let logo = null;
                     if ( props.clicked && props.answerId === index ) {
                         style = props.answers[props.answerId].type ? 'correct' : 'wrong';
+                        logo = style === 'correct' ? correctImage : wrongImage;
                     }
                     return (
                         <div key={index} className={style} onClick={() => {
@@ -26,7 +30,7 @@ const card = (props) => {
                             }
                             return null;
                         }}>
-                                <b>{ansv.answer}</b>
+                                <b>{ansv.answer}{props.clicked && props.answerId === index && (<img src={logo} alt='type' />)}</b>
                                 {props.clicked && props.answerId === index && (<p>{ansv.text}</p>)}
                         </div>
                 )})

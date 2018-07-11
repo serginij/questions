@@ -53,10 +53,34 @@
 }
 
 .correct b {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     color: #8BC34A;
 }
 
+.correct img {
+    width: 1em;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+}
+
+.wrong img {
+    width: 1em;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+}
+
 .wrong b {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     color: #D81B60;
 }
 

@@ -1,0 +1,34 @@
+.Result {
+    width: 40%;
+    padding: 20px;
+    border: 1px solid #AB47BC;
+    box-shadow: 0 1px 1px;
+    margin: 100px auto;
+}
+
+.Score {
+    padding: 1em;
+    border: 1px solid #ccc;
+    background: #eee;
+}
+
+.Score b {
+    border-bottom: 3px solid #AB47BC;
+    width: 80%;
+    padding-bottom: 0.5em;
+}
+
+.Result img {
+    width: 1em;
+}
+
+.Result span {
+    margin-top: 1em;
+    cursor: pointer;
+    color: #AB47BC;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
